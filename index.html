@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>TODO List</title>
+    <meta name="description" content="A simple app to track TODO items">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Todo el mundo tiene que hacer hoy
+</h1>
+    </header>
+    <main>
+        <!-- action="" method="post" -->
+        <form action="" method="post">
+            <input type="text" class="new-todo" placeholder="What needs to be done?">
+        </form>
+        <ul class="items">
+            <!-- todo items go here -->
+            <!-- see TODO TEMPLATE in scripts -->
+        </ul>
+        <footer>
+            <p class="remaining"><span class="incomplete-items">0</span> items left</p>
+            <nav>
+                <ul>
+                    <li><button class="show-all active">All</button></li>
+                    <li><button class="show-active">Active</button></li>
+                    <li><button class="show-completed">Completed</button></li>
+                </ul>
+            </nav>
+            <button class="clear">Clear completed</button>
+        </footer>
+    </main>
+
+    <!-- TODO ITEMS TEMPLATE HERE -->
+    <script id="todo-template" type="text/x-handlebars-template">
+
+        <li class="hide">
+            <article>
+                <button class="check"></button>
+                <p>{{newTodoInput}}</p>
+                <button class="delete">X</button>
+            </article>
+        </li>
+
+    </script>
+    <!-- END OF TODO TEMPLATE -->
+
+    <script src="js/vendor/jquery-3.1.1.min.js"></script>
+    <script src="js/vendor/handlebars-v4.0.5.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
